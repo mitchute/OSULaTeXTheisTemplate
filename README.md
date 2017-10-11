@@ -5,4 +5,4 @@ This is a template for writing a thesis or dissertation using LaTeX at Oklahoma 
 
 # Contributing
 
-# License [![](https://img.shields.io/badge/license-BSD--3--like-orange.svg)](https://github.com/NREL/EnergyPlus/blob/develop/LICENSE.txt)
+# License [![](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/mitchute/OSULaTeXTheisTemplate/blob/master/LICENSE)
