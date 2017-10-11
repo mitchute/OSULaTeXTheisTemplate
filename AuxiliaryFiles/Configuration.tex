@@ -1,0 +1,81 @@
+%====================== font dependent settings
+\renewcommand{\labelitemi}{$\bullet$}
+
+%====================== provides some shapes, not necessarily used directly =====
+\usepackage{pict2e}
+
+%====================== get rid of tiny overfull box warnings ===================
+\hfuzz=3pt
+
+%====================== create an execute function so we can shell out ==========
+\def\execute{%
+	\begingroup
+	\catcode`\%=12
+	\catcode`\\=12
+	\executeaux}
+\def\executeaux#1{\immediate\write18{#1}\endgroup}
+
+%====================== indexing ================================================
+\usepackage{makeidx} %index package
+\execute{makeindex main}	
+\makeindex
+
+%====================== nomenclature ============================================
+\usepackage{nomencl}
+% nomenclature subgroup syntax
+% B = subscript
+% P = superscript
+% R = roman symbols
+% G = greek symbols
+%originally we had the nomgroup redefinition here, but it needs to be in the same
+%  document as the printnomenclature command...or so it seems
+%convert the .nlo list into the proper nomenclature 
+% environment in .nls by using style nomencl.ist
+\execute{makeindex main.nlo -s nomencl.ist -o main.nls}	
+\makenomenclature
+
+%====================== bibliography ============================================
+\usepackage[round]{natbib} %bibliography citation style with round brackets
+
+%====================== AMS math packages =======================================
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{amstext}
+\usepackage{amssymb}
+
+%====================== Tables, figures =========================================
+\usepackage{array}  	
+\usepackage{subfig}
+\usepackage{rotating}
+
+%====================== Units package ===========================================
+\usepackage[squaren]{SIunits} 
+
+%====================== Other packages ==========================================
+\usepackage{graphicx} %convenient graphics import package
+\usepackage{ifthen}       %Add ifthenelse support
+\usepackage{enumerate} %modify enumerate style
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[colorlinks,citecolor=Black,linkcolor=Black,urlcolor=Black,filecolor=Black]{hyperref}
+\usepackage{url} % allow typsetting urls
+\usepackage{setspace} % allow easy variation of line spacing
+\usepackage{lipsum}
+
+%====================== margin comments ========================================
+\setlength{\marginparwidth}{1.0in}
+\setlength{\marginparsep}{0.1in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\tiny #1]{\raggedright\scriptsize\color{red} #1}}
+
+%============ tell LaTeX where to find images ===================================
+\graphicspath{
+              {Ch-Introduction/images/}			 
+              {Ch-Methods/images/}
+              {Ch-Results/images/}			 
+             }
+
+%============ specify how deep layout numbering goes ============================
+\setcounter{secnumdepth}{3} %3 specifies to number down to subsection
+\setcounter{tocdepth}{3} %3 specifies to include down to subsections in the TOC
+
+

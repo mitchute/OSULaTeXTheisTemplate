@@ -1,0 +1,75 @@
+%====================== header ==================================================
+\documentclass[12pt]{osuthesis}
+
+%====================== process the document configuration ======================
+\input{AuxiliaryFiles/Configuration}
+
+%====================== read any new commands or environments ===================
+\input{AuxiliaryFiles/CommandsAndEnvironments}
+
+%====================== document information ====================================
+\input{AuxiliaryFiles/DocInfo}
+
+\begin{document}
+
+%====================== make title page =========================================
+\maketitle
+
+%====================== make approval page ======================================
+\makeapproval{4} % use this for the page your committee will sign
+%\makeElectronicapproval{4} % use this page for the electronic thesis submission 
+
+%====================== make acknowledgments page ===============================
+\begin{acknowledge}
+	\input{Acknowledgments/Acknowledgments}
+\end{acknowledge}
+
+%====================== make abstract ===========================================
+\begin{abstract}{JOHN Q. DOE}{MAY, 2018}{ROCKET SCIENCE}
+    \input{Abstract/Abstract}
+\end{abstract}
+
+%====================== table of contents creation ==============================
+\tableofcontents
+
+%====================== table of tables creation ================================
+\listoftables
+
+%====================== list of figures creation ================================
+\listoffigures
+
+%====================== nomenclature ============================================
+\input{Notation/Notation.tex}
+
+%====================== main  body of the dissertation ==========================
+% ==== Get a new page to leave the last page of the nomenclature unaffected
+\newpage
+% ==== Set line spacing for the bulk of the document
+%\setstretch{1.4}
+\doublespacing
+% ==== Reset page numbering to arabic numerals...this also resets it to start at 1
+\pagenumbering{arabic}
+
+
+%====================== chapters information ====================================
+\input{Ch-Introduction/Introduction}
+\input{Ch-Methods/Methods}
+\input{Ch-Results/Results}
+
+%===================== bibliography ============================================
+%\nocite{*} %leave this to put ALL references in the bibliography
+\newpage
+\renewcommand\bibname{References}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{References/References} %use main dissertation bibtex file
+\bibliographystyle{agsm}
+
+%====================== appendices ==============================================
+\appendix
+\singlespace
+\input{Appendices/Appendix}
+
+%====================== vita ====================================================
+\input{Vita/Vita}
+
+\end{document}
