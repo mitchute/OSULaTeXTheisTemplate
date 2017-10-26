@@ -532,7 +532,7 @@
         %
 
         Major Field:~~#3 \par
-		\vspace{0.5\baselineskip}
+        \vspace{0.5\baselineskip}
         Abstract:
         } \ssp \parindent=0in \parskip=1em
    %\thispagestyle{empty}
@@ -868,9 +868,9 @@
 %       \par \dsp}
 %    \renewcommand{\thepage}{\roman{page} \par
 %    }
-%	\msp
+%    \msp
 %    \@starttoc{toc}
-%	\dsp
+%    \dsp
 %    \newpage
 %    \setcounter{placeholder}{\value{page}}
 %    \pagenumbering{arabic}   % resets page counter to 1, arabic format
@@ -891,7 +891,7 @@
        \par \dsp}
     \renewcommand{\thepage}{\roman{page} %\par
     }
-	\ssp %Edwin for tighter spacing...msp for medium spacing
+    \ssp %Edwin for tighter spacing...msp for medium spacing
     \@starttoc{toc}
     \dsp %Edwin revert to loose spacing
     \newpage

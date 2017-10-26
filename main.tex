@@ -17,7 +17,7 @@
 
 %====================== make approval page ======================================
 \makeapproval{4} % use this for the page your committee will sign
-%\makeElectronicapproval{4} % use this page for the electronic thesis submission 
+%\makeElectronicapproval{4} % use this page for the electronic thesis submission
 
 %====================== make acknowledgments page ===============================
 \begin{acknowledge}
@@ -25,6 +25,7 @@
 \end{acknowledge}
 
 %====================== make abstract ===========================================
+\renewcommand{\thepage}{\roman{page}}
 \begin{abstract}{JOHN Q. DOE}{MAY, 2018}{ROCKET SCIENCE}
     \input{Abstract/Abstract}
 \end{abstract}

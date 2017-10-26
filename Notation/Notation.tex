@@ -2,14 +2,14 @@
 %====================== nomenclature -- must be customized here ===================
 % ==== Redefine the command called for sorting the nomenclature
 \renewcommand{\nomgroup}[1]
-	{%
-	 \ifthenelse{\equal{#1}{R}}{\vspace{0.3cm}\item[\textbf{Variables}]}{
-	  \ifthenelse{\equal{#1}{G}}{\vspace{0.3cm}\item[\textbf{Greek Symbols}]}{
-	   \ifthenelse{\equal{#1}{B}}{\vspace{0.3cm}\item[\textbf{Subscripts/Superscripts}]}{
-	   }
-	  }
-	 }
-	}
+    {%
+     \ifthenelse{\equal{#1}{R}}{\vspace{0.3cm}\item[\textbf{Variables}]}{
+      \ifthenelse{\equal{#1}{G}}{\vspace{0.3cm}\item[\textbf{Greek Symbols}]}{
+       \ifthenelse{\equal{#1}{B}}{\vspace{0.3cm}\item[\textbf{Subscripts/Superscripts}]}{
+       }
+      }
+     }
+    }
 % ==== Redefine the length between items in the nomenclature
 \setlength{\nomitemsep}{-\parsep}
 % ==== Redefine the page to be roman numerals

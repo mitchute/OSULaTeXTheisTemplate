@@ -9,15 +9,15 @@
 
 %====================== create an execute function so we can shell out ==========
 \def\execute{%
-	\begingroup
-	\catcode`\%=12
-	\catcode`\\=12
-	\executeaux}
+    \begingroup
+    \catcode`\%=12
+    \catcode`\\=12
+    \executeaux}
 \def\executeaux#1{\immediate\write18{#1}\endgroup}
 
 %====================== indexing ================================================
 \usepackage{makeidx} %index package
-\execute{makeindex main}	
+\execute{makeindex main}
 \makeindex
 
 %====================== nomenclature ============================================
@@ -29,9 +29,9 @@
 % G = greek symbols
 %originally we had the nomgroup redefinition here, but it needs to be in the same
 %  document as the printnomenclature command...or so it seems
-%convert the .nlo list into the proper nomenclature 
+%convert the .nlo list into the proper nomenclature
 % environment in .nls by using style nomencl.ist
-\execute{makeindex main.nlo -s nomencl.ist -o main.nls}	
+\execute{makeindex main.nlo -s nomencl.ist -o main.nls}
 \makenomenclature
 
 %====================== bibliography ============================================
@@ -44,12 +44,12 @@
 \usepackage{amssymb}
 
 %====================== Tables, figures =========================================
-\usepackage{array}  	
+\usepackage{array}
 \usepackage{subfig}
 \usepackage{rotating}
 
 %====================== Units package ===========================================
-\usepackage[squaren]{SIunits} 
+\usepackage[squaren]{SIunits}
 
 %====================== Other packages ==========================================
 \usepackage{graphicx} %convenient graphics import package
@@ -69,9 +69,9 @@
 
 %============ tell LaTeX where to find images ===================================
 \graphicspath{
-              {Ch-Introduction/images/}			 
+              {Ch-Introduction/images/}
               {Ch-Methods/images/}
-              {Ch-Results/images/}			 
+              {Ch-Results/images/}
              }
 
 %============ specify how deep layout numbering goes ============================
