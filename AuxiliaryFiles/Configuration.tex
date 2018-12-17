@@ -78,4 +78,10 @@
 \setcounter{secnumdepth}{3} %3 specifies to number down to subsection
 \setcounter{tocdepth}{3} %3 specifies to include down to subsections in the TOC
 
-
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@chapter}
+  {\hfil}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
+  {}{}
+\makeatother
