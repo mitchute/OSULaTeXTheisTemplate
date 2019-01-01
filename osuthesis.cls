@@ -321,7 +321,7 @@
      \fi
      \par\vfill\par
      Submitted to the Faculty of the\\
-     Graduate College of the\\
+     Graduate College of\\
      Oklahoma State University\\
      in partial fulfillment of\\
      the requirements for\\
