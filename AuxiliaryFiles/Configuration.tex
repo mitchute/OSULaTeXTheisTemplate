@@ -67,18 +67,18 @@
 \let\oldmarginpar\marginpar
 \renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\tiny #1]{\raggedright\scriptsize\color{red} #1}}
 
-%============ tell LaTeX where to find images ===================================
+%============ tell LaTeX where to find images ==================================
 \graphicspath{
               {Ch-Introduction/images/}
               {Ch-Methods/images/}
               {Ch-Results/images/}
              }
 
-%============ specify how deep layout numbering goes ============================
+%============ specify how deep layout numbering goes ===========================
 \setcounter{secnumdepth}{3} %3 specifies to number down to subsection
 \setcounter{tocdepth}{3} %3 specifies to include down to subsections in the TOC
 
-%============ hack to add leader dots to the TOC chapters ========================
+%============ add leader dots to the TOC chapters ==============================
 \usepackage{etoolbox}
  \makeatletter
  \patchcmd{\l@chapter}
@@ -86,3 +86,9 @@
    {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}\hfill}
    {}{}
  \makeatother
+
+%============ reformat chapters numbers to match model =========================
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}

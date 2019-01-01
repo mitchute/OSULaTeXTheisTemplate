@@ -785,7 +785,9 @@
   \setcounter{chapter}{0}%
   \setcounter{section}{0}%
   \renewcommand\@chapapp{\appendixname}%
-  \renewcommand\thechapter{\@Alph\c@chapter}}
+  \renewcommand\thechapter{\@Alph\c@chapter}
+  \renewcommand\thefigure {\thechapter.\@arabic\c@figure}
+  \renewcommand\thetable {\thechapter.\@arabic\c@table}}
 \setlength\arraycolsep{5\p@}
 \setlength\tabcolsep{6\p@}
 \setlength\arrayrulewidth{.4\p@}
