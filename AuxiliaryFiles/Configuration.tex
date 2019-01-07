@@ -92,3 +92,28 @@
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+%============ commands for adding Chapter/Table/Figure  Page to the TOC/LOT/LOF=
+\usepackage{afterpage}
+\DeclareRobustCommand*{\conttocheading}{%
+  \afterpage{{\normalfont
+  \begin{flushleft}
+  Chapter \hfill Page
+  \end{flushleft}
+   \par\medskip}}}
+   
+\usepackage{afterpage}
+\DeclareRobustCommand*{\conttotheading}{%
+  \afterpage{{\normalfont
+  \begin{flushleft}
+  Table \hfill Page
+  \end{flushleft}
+   \par\medskip}}}
+   
+\usepackage{afterpage}
+\DeclareRobustCommand*{\conttofheading}{%
+  \afterpage{{\normalfont
+  \begin{flushleft}
+  Figure \hfill Page
+  \end{flushleft}
+   \par\medskip}}}
