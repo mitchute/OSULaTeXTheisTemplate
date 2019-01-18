@@ -1,44 +1,27 @@
+\begin{longtable}{p{.25\textwidth} p{.15\textwidth} p{.58\textwidth}}
 
-%====================== nomenclature -- must be customized here ===================
-% ==== Redefine the command called for sorting the nomenclature
-\renewcommand{\nomgroup}[1]
-    {%
-     \ifthenelse{\equal{#1}{R}}{\vspace{0.3cm}\item[\textbf{Variables}]}{
-      \ifthenelse{\equal{#1}{G}}{\vspace{0.3cm}\item[\textbf{Greek Symbols}]}{
-       \ifthenelse{\equal{#1}{B}}{\vspace{0.3cm}\item[\textbf{Subscripts/Superscripts}]}{
-       }
-      }
-     }
-    }
-% ==== Redefine the length between items in the nomenclature
-\setlength{\nomitemsep}{-\parsep}
-% ==== Redefine the page to be roman numerals
-\renewcommand{\thepage}{\roman{page}}
-% ==== Set the value of page to the value of placeholder...which is apparently
-%      passed from the previous environment
-\setcounter{page}{\value{placeholder}}
-% ==== Redefine the nomenclature name to be more inline with other dissertation environments
-\renewcommand{\nomname}{\centering \ssp \rule{0in}{1in} \par
-    NOMENCLATURE \par
-    \vspace*{0.25in} \par \dsp}
-% ==== Add a preamble statement to the nomenclature
-%\renewcommand{\nompreamble}{The following is a list of symbols, variables, and scripts used in this work which may not be defined as they are encountered in the body.}
-% ==== Redefine the nomenclature label to have trailing dots filling up the box
-\renewcommand{\nomlabel}[1]{#1\nobreakspace\dotfill}
-% ==== Print the nomenclature to the pdf
-{\ssp \printnomenclature[0.75in]}
+VARIABLES & UNITS & DESCRIPTION \\
 
-\nomenclature[aA ]{$A$}{Surface area}
-\nomenclature[ac ]{$C_p$}{Specific heat}
-\nomenclature[ae ]{$e'$}{Vapor pressure deficit of the air}
-\nomenclature[aE ]{$E$}{Rate of evapotranspiration from the surface}
-\nomenclature[aGr]{$G_r$}{Net radiation into the surface}
-\nomenclature[aN ]{$N$}{Number or count of a material or property}
+$B$ & \si{\meter} & Spacing \\
+$c_p$ & \si{\joule\per\kilogram\per\kelvin} & Specific Heat \\
+$D$ & \si{\meter} & Depth \\
+$\dot{e}_{gen}$ & \si{\watt\per\meter\cubed} & Internal Energy Generation \\
 
-\nomenclature[g1 ]{$\alpha$}{Thermal diffusivity}
-\nomenclature[g3 ]{$\gamma$}{Psychrometric constant}
+\end{longtable}
 
-\nomenclature[b0 ]{$0$}{Initial condition}
-\nomenclature[ba ]{$a$}{Property of the air}
-\nomenclature[bc ]{$c$}{Radial centroid}
+\begin{longtable}{p{.25\textwidth} p{.15\textwidth} p{.58\textwidth}}
 
+GREEK SYMBOLS & UNITS & DESCRIPTION \\
+
+$\alpha$ & \si{\meter\squared\per\second} & Thermal Diffusivity \\ 
+
+\end{longtable}
+
+\begin{longtable}{p{.40\textwidth} p{.58\textwidth}}
+
+MATERIAL SUBSCRIPTS & \\
+
+$f$ & Fluid \\
+$s$ & Soil \\ 
+
+\end{longtable}

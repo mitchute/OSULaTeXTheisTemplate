@@ -24,6 +24,7 @@
 	\input{Acknowledgments/Acknowledgments}
 \end{acknowledge}
 
+%====================== make dedications page ===============================
 \begin{dedication}
     \input{Dedication/Dedication}
 \end{dedication}
@@ -46,8 +47,15 @@
 %\addtocontents{lof}{\conttofheading}  %% uncomment this line for multipage LOF
 \listoffigures
 
+%====================== abbreviations============================================
+\begin{abbreviation}
+	\input{Abbreviations/Abbreviations}
+\end{abbreviation}
+
 %====================== nomenclature ============================================
-\input{Notation/Notation.tex}
+\begin{nomenclature}
+	\input{Notation/Notation}
+\end{nomenclature}
 
 %====================== main  body of the dissertation ==========================
 % ==== Get a new page to leave the last page of the nomenclature unaffected
@@ -70,7 +78,10 @@
 \renewcommand\bibname{\centering References}
 \addcontentsline{toc}{chapter}{References}
 \bibliography{References/References} %use main dissertation bibtex file
-\bibliographystyle{agsm}
+\bibliographystyle{apalike}
+
+%plainnat is OK
+%model5-names works OK, but needs some manual edits
 
 %====================== appendices ==============================================
 \appendix

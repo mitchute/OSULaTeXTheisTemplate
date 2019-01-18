@@ -487,6 +487,12 @@
 % ********************************************************
 % ********************************************************
 
+\newenvironment{abbreviation}
+  {\newpage \renewcommand{\thepage}{\roman{page}}
+     {\centering \ssp \rule{0in}{1in} \par
+        ABBREVIATIONS
+        \vspace*{0.25in} \par \dsp}}
+  {\newpage\renewcommand{\thepage}{\arabic{page}}}
 
 % ********************************************************
 % ***************  ACKNOWLEDGMENTS PAGE  ****************
@@ -495,7 +501,7 @@
 \newenvironment{acknowledge}
   {\newpage \renewcommand{\thepage}{\roman{page}}
      {\centering \ssp \rule{0in}{1in} \par
-        ACKNOWLEDGMENTS\let\thefootnote\relax\footnote{Acknowledgments reflect the views of the author and are not endorsed by committee members or Oklahoma State University.} \par
+        ACKNOWLEDGMENTS
         \vspace*{0.25in} \par \dsp}
   }
   {\newpage\renewcommand{\thepage}{\arabic{page}}}
@@ -893,12 +899,12 @@
        \par \dsp}
     \renewcommand{\thepage}{\roman{page} %\par
     }
-    \ssp %Edwin for tighter spacing...msp for medium spacing
+	\ssp %Edwin for tighter spacing...msp for medium spacing
     \@starttoc{toc}
     \dsp %Edwin revert to loose spacing
     \newpage
     \setcounter{placeholder}{\value{page}}
-    \pagenumbering{arabic}   % resets page counter to 1, arabic format
+%    \pagenumbering{arabic}   % resets page counter to 1, arabic format
     }
 % ********************************************************
 % ********************************************************
@@ -959,7 +965,7 @@
     \setcounter{page}{\value{placeholder}}
     \@starttoc{lof} \newpage
     \setcounter{placeholder}{\value{page}}
-    \pagenumbering{arabic}
+%    \pagenumbering{arabic}
     }
 \newcommand*\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand\listoftables{%
@@ -976,7 +982,7 @@
     \setcounter{page}{\value{placeholder}}
     \@starttoc{lot} \newpage
     \setcounter{placeholder}{\value{page}}
-    \pagenumbering{arabic}
+%    \pagenumbering{arabic}
 \renewcommand{\thepage}{\arabic{page}}
     }
 \let\l@table\l@figure
