@@ -382,8 +382,6 @@
            \rule{\titlewidth}{0in} \\ \mbox{} \\ \mbox{} \\ \hline  % Sets width of sig. lines
            Thesis Advisor \\ \mbox{} \\ \mbox{} \\ \hline
            \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
-           %\mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
-           %Dean of the Graduate College
          \end{tabular}}
          \vspace*{1in}
      \fi
@@ -395,8 +393,6 @@
            Thesis Advisor \\ \mbox{} \\ \mbox{} \\ \hline
            \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
            \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
-           %\mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
-           %Dean of the Graduate College
          \end{tabular}}
      \fi
      \ifnum #1=5 %Five committee members
@@ -407,8 +403,17 @@
            \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
            \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
            \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
-           %\mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
-           %Dean of the Graduate College
+         \end{tabular}}
+     \fi
+     \ifnum #1=6 %Six committee members
+       \parbox{\titlewidth}{\centering %
+         \begin{tabular}{@{}c@{}}
+           \rule{\titlewidth}{0in} \\ \mbox{} \\ \mbox{} \\ \hline  % Sets width of sig. lines
+           Thesis Advisor \\ \mbox{} \\ \mbox{} \\ \hline
+           \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
+           \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
+           \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
+           \mbox{} \\ \mbox{} \\ \mbox{} \\ \hline
          \end{tabular}}
      \fi
      \end{center}
@@ -459,6 +464,17 @@
            \mbox{} \\ \mbox{} \\ Reader 2 Name \\ \hline
            \mbox{} \\ \mbox{} \\ Reader 3 Name \\ \hline
            \mbox{} \\ \mbox{} \\ Reader 4 Name \\ \hline
+         \end{tabular}}
+     \fi
+     \ifnum #1=6 %Six committee members
+       \parbox{\titlewidth}{\centering %
+         \begin{tabular}{@{}c@{}}
+           \rule{\titlewidth}{0in} \\ \mbox{} \\ Advisor Name \\ \hline  % Sets width of sig. lines
+           Thesis Advisor \\ \mbox{} \\ Reader 1 Name \\ \hline
+           \mbox{} \\ \mbox{} \\ Reader 2 Name \\ \hline
+           \mbox{} \\ \mbox{} \\ Reader 3 Name \\ \hline
+           \mbox{} \\ \mbox{} \\ Reader 4 Name \\ \hline
+           \mbox{} \\ \mbox{} \\ Reader 5 Name \\ \hline
          \end{tabular}}
      \fi
      \end{center}
