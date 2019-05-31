@@ -31,7 +31,7 @@
 
 %====================== make abstract ===========================================
 \renewcommand{\thepage}{\roman{page}}
-\begin{abstract}{JOHN Q. DOE}{MAY, 2018}{ROCKET SCIENCE}
+\begin{abstract}{JOHN Q. DOE}{ROCKET SCIENCE}
     \input{Abstract/Abstract}
 \end{abstract}
 
@@ -78,10 +78,10 @@
 \renewcommand\bibname{\centering References}
 \addcontentsline{toc}{chapter}{References}
 \bibliography{References/References} %use main dissertation bibtex file
-\bibliographystyle{apalike}
+\bibliographystyle{apa}
 
-%plainnat is OK
-%model5-names works OK, but needs some manual edits
+% uncomment to print all refs in BibTex lib
+%\nocite{*}
 
 %====================== appendices ==============================================
 \appendix

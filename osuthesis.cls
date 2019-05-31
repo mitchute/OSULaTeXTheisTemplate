@@ -537,7 +537,7 @@
 % *******************  ABSTRACT PAGE  ********************
 % ********************************************************
 
-\newenvironment{abstract}[3]{%
+\newenvironment{abstract}[2]{%
         \newpage
         %\addtocounter{page}{-1}
         %\thispagestyle{empty}
@@ -553,7 +553,7 @@
            \par
         %
 
-        Major Field:~~#3 \par
+        Major Field:~~#2 \par
         \vspace{0.5\baselineskip}
         Abstract:
         } \ssp \parindent=0in \parskip=1em
