@@ -1,0 +1,19 @@
+name: Build Paper
+on: [push]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install System dependencies and LaTeX
+        shell: bash
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-publishers texlive-science texlive-bibtex-extra gnuplot
+      - name: Build Paper
+        run: make
+      - name: Upload Paper
+        uses: actions/upload-artifact@v2
+        with:
+          name: paper
+          path: main.pdf
