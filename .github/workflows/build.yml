@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install System dependencies and LaTeX
         shell: bash
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-publishers gnuplot
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-publishers texlive-science gnuplot
       - name: Build Paper
         run: make
       - name: Upload Paper
