@@ -56,11 +56,34 @@
 }
 
 %====================== table of tables creation ================================
-%\addtocontents{lot}{\conttotheading}  %% uncomment this line for multipage LOT
+\fancypagestyle{fancyplain}{ %
+ \lhead{ \fancyplain{}{Table} }
+ \rhead{ \fancyplain{}{Page} }
+ \renewcommand{\headrulewidth}{0pt} % remove lines as well
+ \renewcommand{\footrulewidth}{0pt}
+}
+\thispagestyle{empty}  % Removes header on first page
+\newpage
+\changepage{-29.43001pt}{}{}{}{}{}{15pt}{12pt}{}
+\pagestyle{fancyplain}
+\thispagestyle{plain}
+\ssp
 \listoftables
+\thispagestyle{empty}  % Removes header on first page of LOF
 
 %====================== list of figures creation ================================
-%\addtocontents{lof}{\conttofheading}  %% uncomment this line for multipage LOF
+\fancypagestyle{fancyplain}{ %
+ \lhead{ \fancyplain{}{Table} }
+ \rhead{ \fancyplain{}{Page} }
+ \renewcommand{\headrulewidth}{0pt} % remove lines as well
+ \renewcommand{\footrulewidth}{0pt}
+}
+\thispagestyle{empty}  % Removes header on first page
+\newpage
+\changepage{-29.43001pt}{}{}{}{}{}{15pt}{12pt}{}
+\pagestyle{fancyplain}
+\thispagestyle{plain}
+\ssp
 \listoffigures
 
 %====================== abbreviations============================================
