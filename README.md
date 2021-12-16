@@ -11,7 +11,7 @@ This template has been successfully utilized by many OSU graduate students. The 
 
 |   Author  |  Major | Submitted  |  Approved | Number of edits |               Comments              |
 |:---------:|:------:|:----------:|:---------:|:---------------:|:-----------------------------------:|
-| @j-c-cook | MS MAE |  3-Dec-21  | 13-Dec-21 |        1        | The edit had to do with formatting. |
+| [@j-c-cook](https://github.com/j-c-cook) | MS MAE |  3-Dec-21  | 13-Dec-21 |        1        | The edit had to do with formatting. |
 
 
 # License [![](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/mitchute/OSULaTeXTheisTemplate/blob/master/LICENSE)
