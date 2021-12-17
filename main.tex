@@ -35,17 +35,67 @@
     \input{Abstract/Abstract}
 \end{abstract}
 
+
+% The TOC/LOF/LOT found below are adapted from the work of Paul Fili and Edward Richmond (2020), the two who updated the grad colleges template. This implementation is not ideal because it "crowds" this main file, or adds many repetitive lines. A suave implementation would be preferred, and perhaps a future student more adept in Latex could clean it up. -JCC 2021.12.16
 %====================== table of contents creation ==============================
-%\addtocontents{toc}{\conttocheading}  %% uncomment this line for multipage TOC
+{\addtocontents{toc}{\protect\renewcommand{\protect\cftchapleader}
+ {\protect\cftdotfill{\cftsecdotsep}}} %<-adds leaders at the chapter level
+
+% This sets up the left and right header on the 2nd, 3rd... etc. pages
+\fancypagestyle{fancyplain}{ %
+\lhead{ \fancyplain{}{Chapter} }
+\rhead{ \fancyplain{}{Page} }
+ \renewcommand{\headrulewidth}{0pt} % remove lines which fancyhdr usually uses
+ \renewcommand{\footrulewidth}{0pt}
+}
+
+\thispagestyle{empty}  % Removes header on first page
+\newpage
+\changepage{-29.43001pt}{}{}{}{}{}{15pt}{12pt}{}
+\pagestyle{fancyplain}
+\thispagestyle{plain}
 \tableofcontents
+}
 
 %====================== table of tables creation ================================
-%\addtocontents{lot}{\conttotheading}  %% uncomment this line for multipage LOT
+{\addtocontents{toc}{\protect\renewcommand{\protect\cftchapleader}
+ {\protect\cftdotfill{\cftsecdotsep}}} %<-adds leaders at the chapter level
+
+% This sets up the left and right header on the 2nd, 3rd... etc. pages
+\fancypagestyle{fancyplain}{ %
+\lhead{ \fancyplain{}{Table} }
+\rhead{ \fancyplain{}{Page} }
+ \renewcommand{\headrulewidth}{0pt} % remove lines which fancyhdr usually uses
+ \renewcommand{\footrulewidth}{0pt}
+}
+
+\thispagestyle{empty}  % Removes header on first page
+\newpage
+\changepage{-29.43001pt}{}{}{}{}{}{15pt}{12pt}{}
+\pagestyle{fancyplain}
+\thispagestyle{plain}
 \listoftables
+}
 
 %====================== list of figures creation ================================
-%\addtocontents{lof}{\conttofheading}  %% uncomment this line for multipage LOF
+{\addtocontents{toc}{\protect\renewcommand{\protect\cftchapleader}
+ {\protect\cftdotfill{\cftsecdotsep}}} %<-adds leaders at the chapter level
+
+% This sets up the left and right header on the 2nd, 3rd... etc. pages
+\fancypagestyle{fancyplain}{ %
+\lhead{ \fancyplain{}{Figure} }
+\rhead{ \fancyplain{}{Page} }
+ \renewcommand{\headrulewidth}{0pt} % remove lines which fancyhdr usually uses
+ \renewcommand{\footrulewidth}{0pt}
+}
+
+\thispagestyle{empty}  % Removes header on first page
+\newpage
+\changepage{-29.43001pt}{}{}{}{}{}{15pt}{12pt}{}
+\pagestyle{fancyplain}
+\thispagestyle{plain}
 \listoffigures
+}
 
 %====================== abbreviations============================================
 \begin{abbreviation}

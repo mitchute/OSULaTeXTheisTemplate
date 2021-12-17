@@ -34,6 +34,10 @@
 \usepackage{subcaption}
 \usepackage{rotating}
 \usepackage{longtable}
+% The following 3 packages are for the multi-page "Chapter" and "Page"
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\usepackage[titles]{tocloft}
 
 %====================== Units package ===========================================
 \usepackage{siunitx}
@@ -82,28 +86,3 @@
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}} 
-
-%============ commands for adding Chapter/Table/Figure  Page to the TOC/LOT/LOF=
-\usepackage{afterpage}
-\DeclareRobustCommand*{\conttocheading}{%
-  \afterpage{{\normalfont
-  \begin{flushleft}
-  Chapter \hfill Page
-  \end{flushleft}
-   \par\medskip}}}
-   
-\usepackage{afterpage}
-\DeclareRobustCommand*{\conttotheading}{%
-  \afterpage{{\normalfont
-  \begin{flushleft}
-  Table \hfill Page
-  \end{flushleft}
-   \par\medskip}}}
-   
-\usepackage{afterpage}
-\DeclareRobustCommand*{\conttofheading}{%
-  \afterpage{{\normalfont
-  \begin{flushleft}
-  Figure \hfill Page
-  \end{flushleft}
-   \par\medskip}}}
