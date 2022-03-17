@@ -23,6 +23,12 @@
 %====================== bibliography ============================================
 \usepackage[round]{natbib} %bibliography citation style with round brackets
 
+%====================== Acknowledgements =======================================
+% The command, \blfootnote{} provides for a footnote with no number
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
 %====================== AMS math packages =======================================
 \usepackage{amsmath}
 \usepackage{amsxtra}
